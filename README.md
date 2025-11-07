@@ -11,10 +11,12 @@ Typy code uses nearly identical syntax to Python — the only differences are in
 
 # Typy syntax
 
-    str greeting = "hello world"
-    
-    int add(int a = 1, int b = 2):
-        return a + b
+```python
+str greeting = "hello world"
+
+int add(int a = 1, int b = 2):
+    return a + b
+```
 
 When compiled, Typy translates directly to standard Python code with **optional runtime type enforcement** depending on your chosen mode.
 
@@ -84,19 +86,23 @@ Unsafe mode simply **ignores Typy’s type enforcement** for those definitions �
 
 ## Normal typed code
 
-    float radius = 5.2
-    
-    float area(float r = radius):
-        return 3.1415 * (r ** 2)
-    
-    print(area())
+```python
+float radius = 5.2
+
+float area(float r = radius):
+    return 3.1415 * (r ** 2)
+
+print(area())
+```
 
 ## Multiple return types
 
+```python
     types(int, str) format_id(int id = 5):
         if id == 5:
             return "Admin"
         return id
+```
 
 You can use **multiple return types** to **allow for flexible return patterns without abandoning static safety**.
 
@@ -115,6 +121,8 @@ It’s built to **make you think consciously about your type decisions — not t
 It lets you **enjoy the fluidity of Python while catching the dumb type mistakes** before they break your runtime.
 
 # 🔧 Example Compilation Flow
-    
-    typy compile example.typy --mode enforce
-    python typy compile example.typy --mode normal
+
+```bash
+typy compile example.typy --mode enforce
+python typy compile example.typy --mode normal
+```
