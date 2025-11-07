@@ -29,13 +29,13 @@ Compile-time and runtime **type enforcement** for both **variables and functions
 Optional **multi-type** return annotations using **types(<types>)**.
 
 ```python
-    # input.typy
-    types(int, float) get_modulo(types(int, float) number = 0, types(int, float) modulo = 1):
-        return number % modulo
+# input.typy
+types(int, float) get_modulo(types(int, float) number = 0, types(int, float) modulo = 1):
+    return number % modulo
 
-    # output.py
-    def get_modulo(number: (int, float) = 0, modulo: (int, float) = 1) -> (int, float):
-        return number % modulo
+# output.py
+def get_modulo(number: (int, float) = 0, modulo: (int, float) = 1) -> (int, float):
+    return number % modulo
 ```
     
 Two operating modes — **enforce and normal**.
@@ -48,7 +48,7 @@ Designed for **conscious type use, not type restriction** — you can still use 
 
 Typy supports **nested type definitions** just like Python’s type hints, such as:
 
-```python
+```C
 list[str] listified_greeting = ["hello", "world"]
 dict[str, int] ages = {"Bob": 18, "Alice": 19}
 ```
