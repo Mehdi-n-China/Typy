@@ -48,7 +48,7 @@ Designed for **conscious type use, not type restriction** — you can still use 
 
 Typy supports **nested type definitions** just like Python’s type hints, such as:
 
-```C
+```python
 list[str] listified_greeting = ["hello", "world"]
 dict[str, int] ages = {"Bob": 18, "Alice": 19}
 ```
