@@ -5,16 +5,16 @@
     ⚠️ This project is not related to the existing typy module on PyPI.
     It’s a completely separate implementation that does not affect or modify any external libraries or the Python interpreter itself.
 
-💡 Overview
+## 💡 Overview
 
 Typy code uses nearly identical syntax to Python — the only differences are in variable and function declarations:
 
 # Typy syntax
-int x = 5
-str name = "Mehdi"
-
-int add(int a = 1, int b = 2):
-    return a + b
+    int x = 5
+    str name = "Mehdi"
+    
+    int add(int a = 1, int b = 2):
+        return a + b
     
 When compiled, Typy translates directly to standard Python code with optional runtime type enforcement depending on your chosen mode.
 
