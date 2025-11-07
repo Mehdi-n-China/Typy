@@ -2,8 +2,8 @@
 
 **Typy is a lightweight, statically-typed extension of Python that introduces simple, intuitive syntax for enforcing variable and function types without breaking Python’s natural flexibility.**
     
-    ⚠️ This project is not related to the existing typy module on PyPI.
-    It’s a completely separate implementation that does not affect or modify any external libraries or the Python interpreter itself.
+⚠️ This project is not related to the existing typy module on PyPI.
+It’s a completely separate implementation that does not affect or modify any external libraries or the Python interpreter itself.
     
 # 💡 Overview
 
