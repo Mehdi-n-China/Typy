@@ -1,0 +1,16 @@
+
+int x = 10
+
+if __name__ == "__main__":
+    int vector = 10
+
+    list[str] chars = ["1", "2", "3"]
+
+func.int main():
+    hi()
+
+class my_class(Exception):
+    func.None __init__(self):
+        print("hello world")
+
+my_class()
