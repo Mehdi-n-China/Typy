@@ -4,25 +4,30 @@
     ⚠️ This project is not related to the existing typy module on PyPI.
     It’s a completely separate implementation that does not affect or modify any external libraries or the Python interpreter itself.
     
-## 💡 Overview
+# 💡 Overview
 
 Typy code uses nearly identical syntax to Python — the only differences are in variable and function declarations:
 
-## Typy syntax
+# Typy syntax
+
     int x = 69
     str name = "hello world"
     
     int add(int a = 1, int b = 2):
         return a + b
+
 When compiled, Typy translates directly to standard Python code with optional runtime type enforcement depending on your chosen mode.
 
-⚙️ Features
+# ⚙️ Features
 
 Full compatibility with all existing Python libraries and syntax.
 
 Compile-time and runtime type enforcement for both variables and functions.
 
 Optional multi-type return annotations using types(<types>).
+
+    # input.typy
+    types(int)
 
 Two operating modes — enforce and normal.
 
