@@ -9,13 +9,12 @@
 
 Typy code uses nearly identical syntax to Python — the only differences are in variable and function declarations:
 
-# Typy syntax
-    int x = 5
-    str name = "Mehdi"
+## Typy syntax
+    int x = 69
+    str name = "hello world"
     
     int add(int a = 1, int b = 2):
         return a + b
-    
 When compiled, Typy translates directly to standard Python code with optional runtime type enforcement depending on your chosen mode.
 
 ⚙️ Features
