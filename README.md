@@ -98,10 +98,10 @@ print(area())
 ## Multiple return types
 
 ```python
-    types(int, str) format_id(int id = 5):
-        if id == 5:
-            return "Admin"
-        return id
+types(int, str) format_id(int id = 5):
+    if id == 5:
+        return "Admin"
+    return id
 ```
 
 You can use **multiple return types** to **allow for flexible return patterns without abandoning static safety**.
