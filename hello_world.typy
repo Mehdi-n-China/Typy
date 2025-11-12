@@ -1,0 +1,69 @@
+# ------------------------------
+# Typy Language Demo
+# ------------------------------
+# This file shows Typy syntax, types, functions, and runtime checks
+# ------------------------------
+
+# ---- Variables ----
+
+# single type
+int x = 69
+
+# nested type
+list[int] y = [1, 2, 3]
+
+# as nested as you need
+list[tuple[int, ...]] z = [(1, 1)]
+
+# allowed but not best
+types(int) number = 1
+
+# it is not recommended to use the types(<types>) syntax when creating variable, but its allowed
+types(int, str, bool) some_var = "a random string"
+
+# same as single, accepts nested types
+types(dict[str, str], list[str]) some_other_var = {"key": "value"}
+
+# to declare class bound types, use types()
+class Apple:
+	pass
+
+types(Apple) apple = Apple
+
+# ---- Functions ----
+
+# basic function (void just means None)
+void main():
+    pass
+
+# None is still accepted
+None main():
+	pass
+
+# function with arguments
+str greet(str name):
+    return f"Hello, {name}"
+
+# function with multiple types
+types(str, int) do_something(types(str, int,) value):
+    return value
+
+# Function with mutable default (None is accepted for mutables)
+list append_item(list[str] lst = None):
+	if lst is None:
+		lst = []
+	lst.append("some value")
+	return lst
+
+# ---- Runtime Type Enforcement ----
+# The following lines would fail in enforce mode if uncommented:
+
+# int x = "not an int"           #  Type error
+# append_item(lst="not a list")  #  Type error
+
+# ---- Notes ----
+# - Mutable defaults: Typy allows None for mutables automatically
+# - Nested collections: list[int], dict[str, list[int]], tuple[int, ...]
+# - Runtime type enforcement for both arguments and return values
+# - Union types: use types(...) e.g., types(int, str)
+# - Type hints like Literal, Final, Annotated are ignored
